@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<input type='file' id='selector'>
+		<br>
+		<input type='number' id='width'>
+		<input type='number' id='height'>
+		<input type='button' id='button' value="Render" disabled>
+		<br>
+		<canvas id="canvas">
+		<script>
+			const selector = document.getElementById('selector');
+			const width = document.getElementById('width');
+			const height = document.getElementById('height');
+			const button = document.getElementById('button');
+			const canvas = document.getElementById('canvas');
+			const ctx = canvas.getContext('2d');
+			
+			let svg;
+			
+			selector.onchange = function() {
+				const reader = new FileReader();
+				reader.readAsDataURL(this.files[0]);
+				reader.onload = e => {
+					svg = new Image();
+					svg.src = e.target.result;
+					button.disabled = false;
+				};
+			};
+			
+			button.onclick = function() {
+				canvas.width = width.value;
+				canvas.height = height.value;
+				ctx.drawImage(svg, 0, 0, width.value, height.value);
+			};
+		</script>
+	</body>
+</html>

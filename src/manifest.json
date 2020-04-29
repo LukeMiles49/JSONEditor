@@ -1,0 +1,44 @@
+{
+	"short_name": "JSON Editor",
+	"name": "JSON Editor",
+	"description": "A JSON editor that uses templates for smart autocompletion and suggestions",
+	"icons": [{
+		"src": "./icon/compat-128x128.png",
+		"sizes": "128x128",
+		"type": "image/png",
+		"purpose": "any"
+	}, {
+		"src": "./icon/compat-144x144.png",
+		"sizes": "144x144",
+		"type": "image/png",
+		"purpose": "any"
+	}, {
+		"src": "./icon/compat-152x152.png",
+		"sizes": "152x152",
+		"type": "image/png",
+		"purpose": "any"
+	}, {
+		"src": "./icon/compat-192x192.png",
+		"sizes": "192x192",
+		"type": "image/png",
+		"purpose": "any"
+	}, {
+		"src": "./icon/compat-256x256.png",
+		"sizes": "256x256",
+		"type": "image/png",
+		"purpose": "any"
+	}, {
+		"src": "./icon/compat-512x512.png",
+		"sizes": "512x512",
+		"type": "image/png",
+		"purpose": "any"
+	}, {
+		"src": "./icon/icon-anysize.svg",
+		"sizes": "any",
+		"type": "image/svg+xml",
+		"purpose": "any"
+	}],
+	"start_url": ".",
+	"display": "standalone",
+	"background_color": "#FFF"
+}
