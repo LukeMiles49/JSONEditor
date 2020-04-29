@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "description": "A JSON editor that uses templates for smart autocompletion and suggestions",
   "scripts": {
-    "start": "npm-run-all --parallel build-watch serve",
-    "build": "babel src --out-dir dist --extensions .ts --copy-files --ignore src/**/*.d.ts",
-    "build-watch": "babel src --out-dir dist --extensions .ts --copy-files --ignore src/**/*.d.ts --watch",
+    "start": "run-p build-dev serve",
+    "build": "cross-env BABEL_ENV=production babel src --out-dir dist --extensions .ts --copy-files --ignore src/**/*.d.ts --delete-dir-on-start",
+    "build-dev": "babel src --out-dir dist --extensions .ts --copy-files --ignore src/**/*.d.ts --delete-dir-on-start --watch",
     "serve": "serve dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -26,6 +26,8 @@
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-typescript": "^7.9.0",
     "babel-plugin-add-import-extension": "^1.3.1",
+    "babel-preset-minify": "^0.5.1",
+    "cross-env": "^7.0.2",
     "npm-run-all": "^4.1.5",
     "serve": "^11.3.0",
     "ts-loader": "^7.0.1",
@@ -53,7 +55,14 @@
     "plugins": [
       "@babel/proposal-class-properties",
       "babel-plugin-add-import-extension"
-    ]
+    ],
+    "env": {
+      "production": {
+        "presets": [
+          "minify"
+        ]
+      }
+    }
   },
   "browserslist": [
     "last 2 Chrome versions",
