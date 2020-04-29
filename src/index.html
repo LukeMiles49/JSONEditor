@@ -5,12 +5,18 @@
 		<title>JSON Editor</title>
 		<meta name="description" content="A JSON editor that uses templates for smart autocompletion and suggestions">
 		<link rel="icon" href="./icon/icon-anysize.svg">
-		<link rel="manifest" href="./manifest.json">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="apple-mobile-web-app-title" content="Weather PWA">
 		<link rel="apple-touch-icon" href="./icon/compat-152x152.png">
+		<link rel="manifest" href="./manifest.json">
+		<script>
+			// Register service worker.
+			if ('serviceWorker' in navigator)
+				window.addEventListener('load', () =>
+					navigator.serviceWorker.register('./service-worker.js'));
+		</script>
 	</head>
 	<body>
 		<script type="module" src="./app.js"></script>
