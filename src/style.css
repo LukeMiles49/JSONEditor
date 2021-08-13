@@ -1,0 +1,32 @@
+#editor {
+	background-color: #1E1E1E;
+	color: #CCCCCC;
+}
+
+span {
+	display: inline-block;
+}
+
+#editor .boolean, #editor .null {
+	color: #569CD6;
+}
+
+#editor .number {
+	color: #B5CEA8;
+}
+
+#editor .string-value, #editor .string-quote {
+	color: #CE9178;
+}
+
+#editor .string-escape {
+	color: #D7BA7D;
+}
+
+#editor .object-values {
+	padding-left: 2ch;
+}
+
+#editor .object-colon {
+	padding-right: 1ch;
+}

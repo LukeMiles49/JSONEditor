@@ -1,8 +1,7 @@
 const CACHE_NAME = 'v1';
 const FILES_TO_CACHE = [
-	'.',
-	'./app.js',
 	'./manifest.json',
+	
 	'./icon/compat-128x128.png',
 	'./icon/compat-144x144.png',
 	'./icon/compat-152x152.png',
@@ -10,6 +9,23 @@ const FILES_TO_CACHE = [
 	'./icon/compat-256x256.png',
 	'./icon/compat-512x512.png',
 	'./icon/icon-anysize.svg',
+	
+	'.',
+	'./index.js',
+	// TODO: Style and imports
+	
+	'./components/EditableElement.js',
+	'./components/Editor.js',
+	'./components/Pane.js',
+	'./components/json/index.js',
+	'./components/json/JSONValue.js',
+	'./components/json/JSONObject.js',
+	'./components/json/JSONList.js',
+	'./components/json/JSONSimple.js',
+	'./components/json/JSONString.js',
+	'./components/json/JSONNumber.js',
+	'./components/json/JSONBoolean.js',
+	'./components/json/JSONNull.js',
 ];
 
 type ExtendableEvent = Event & {
