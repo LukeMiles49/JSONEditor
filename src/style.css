@@ -1,10 +1,7 @@
 #editor {
 	background-color: #1E1E1E;
 	color: #CCCCCC;
-}
-
-span {
-	display: inline-block;
+	white-space: pre;
 }
 
 #editor .boolean, #editor .null {
@@ -21,12 +18,4 @@ span {
 
 #editor .string-escape {
 	color: #D7BA7D;
-}
-
-#editor .object-values {
-	padding-left: 2ch;
-}
-
-#editor .object-colon {
-	padding-right: 1ch;
 }

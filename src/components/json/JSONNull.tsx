@@ -4,7 +4,7 @@ import {Format} from './JSONValue';
 import JSONSimple from './JSONSimple';
 
 export default class JSONNull extends JSONSimple {
-	public render({value, format}: Props<{value: null, format: Format}>): VNode {
+	public render({value, format, indent}: Props<{value: null, format: Format, indent: number}>): VNode {
 		return <span className='null'>null</span>;
 	}
 }

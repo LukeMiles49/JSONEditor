@@ -4,7 +4,7 @@ import JSONSimple from './JSONSimple';
 import {Format} from './JSONValue';
 
 export default class JSONString extends JSONSimple {
-	public render({value, format}: Props<{value: string, format: Format}>): VNode {
+	public render({value, format, indent}: Props<{value: string, format: Format, indent: number}>): VNode {
 		switch (format) {
 			case Format.Textual: return (
 				<span className='string'>

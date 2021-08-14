@@ -8,11 +8,13 @@ export default class Pane extends Component {
 		return (
 			<div>
 				<EditableElement>
-					{JSONValue.fromJSON({
-						"hello 😊": 7,
-						"x": true,
-						"y": null,
-					}, Format.Textual)}
+					<div>
+						{JSONValue.fromJSON({
+							"hello 😊": 7,
+							"x": true,
+							"y": [null, "abc", false],
+						}, Format.Textual, 0)}
+					</div>
 				</EditableElement>
 			</div>
 		);
